@@ -65,13 +65,13 @@ void uart2_send_string(const char *str)
  *        Este handler se llama cuando hay datos recibidos en USART2.
  *        Procesa el dato recibido y lo envía de vuelta (eco).
  */
-void USART2_IRQHandler(void)
-{
+//void USART2_IRQHandler(void)
+//{
     // Verificar si la interrupción fue por RXNE (dato recibido y RDR no vacío)
-    if (USART2->ISR & USART_ISR_RXNE) {
+    //if (USART2->ISR & USART_ISR_RXNE) {
         // Leer el dato del RDR. Esta acción usualmente limpia el flag RXNE.
-        char received_char = (char)(USART2->RDR & 0xFF);
-        uart2_send_char(received_char); // Eco del carácter recibido 
+        //char received_char = (char)(USART2->RDR & 0xFF);
+        //uart2_send_char(received_char); // Eco del carácter recibido 
         // Procesar el carácter recibido.
-    }
-}
+    //}
+//}

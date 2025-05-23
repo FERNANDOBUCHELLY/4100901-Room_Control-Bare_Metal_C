@@ -37,6 +37,7 @@ uint32_t systick_get_tick(void)
     return g_systick_ms_count;
 }
 
+
 void systick_delay_ms(uint32_t ms)
 {
     uint32_t start_tick = systick_get_tick(); 
@@ -45,12 +46,9 @@ void systick_delay_ms(uint32_t ms)
     }
 }
 
-/**
- * @brief Handler de SysTick
- *        Este handler se llama cada vez que el SysTick cuenta hasta cero.
- *        Incrementa el contador global de milisegundos.
-*/
+
 void SysTick_Handler(void)
 {
-    g_systick_ms_count++;
+    g_systick_ms_count++; // Incrementar el contador de ticks global
 }
+

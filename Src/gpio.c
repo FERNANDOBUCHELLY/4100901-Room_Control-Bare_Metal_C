@@ -69,12 +69,12 @@ uint8_t gpio_read_pin(GPIO_TypeDef *gpio_port, uint8_t pin_number)
  *        del archivo de arranque (startup_stm32l476rgtx.s).
  *        Esta ISR puede ser llamada por room_control.c si la lógica es compleja.
  */
-void EXTI15_10_IRQHandler(void) {
+//void EXTI15_10_IRQHandler(void) {
     // 1. Verificar si la interrupción fue de la línea EXTI13
-    if ((EXTI->PR1 & (1U << 13)) != 0) {
+    //if ((EXTI->PR1 & (1U << 13)) != 0) {
         // 2. Limpiar el flag de pendiente de la interrupción (escribiendo '1')
-        EXTI->PR1 |= (1U << 13);
+        //EXTI->PR1 |= (1U << 13);
         // 3. Procesar boton presionado
-    }
-}
+    //}
+//}
 

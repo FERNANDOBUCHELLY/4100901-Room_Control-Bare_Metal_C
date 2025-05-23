@@ -16,6 +16,7 @@ void rcc_gpio_clock_enable(GPIO_TypeDef *gpio_port)
     } else if (gpio_port == GPIOC) {
         RCC->AHB2ENR |= 0x01 << 2;
     }
+    // Añadir más puertos GPIO si son necesarios (D, E, F, G, H)
 }
 
 void rcc_syscfg_clock_enable(void)
